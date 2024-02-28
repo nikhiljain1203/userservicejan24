@@ -1,5 +1,7 @@
 package com.scaler.userservicemwfeve.controllers;
 
+import com.scaler.userservicemwfeve.dtos.LoginRequestDto;
+import com.scaler.userservicemwfeve.models.Token;
 import com.scaler.userservicemwfeve.models.User;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,9 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/users")
 public class UserController {
-    public User login() {
+    public Token login(LoginRequestDto requestDto) {
         // check if email and password in db
-        // if yes return user
+        // if yes create token (use random string) return token
         // else throw some error
         return null;
     }
